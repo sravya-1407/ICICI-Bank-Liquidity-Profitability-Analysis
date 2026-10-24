@@ -13,8 +13,8 @@ public class DatabaseConnection {
         try {
             String url = "jdbc:mysql://localhost:3306/icici_bank";
             String user = "root";
-            String password = "chinna.srav";
-
+            String password = 
+System.getenv("DB_PASSWORD");
             con = DriverManager.getConnection(url, user, password);
 
             System.out.println("MySQL Connected Successfully!");
